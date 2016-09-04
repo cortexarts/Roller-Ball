@@ -24,7 +24,7 @@ function Update ()
 	GetComponent.<Rigidbody>().AddRelativeTorque (Vector3.back * rotation);
 	
 	//Player Jumping
-	if (Input.GetKeyDown(KeyCode.W) && IsGrounded())
+	if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) && IsGrounded())
 	{
 		
 		GetComponent.<Rigidbody>().velocity.y = jumpHeight;
